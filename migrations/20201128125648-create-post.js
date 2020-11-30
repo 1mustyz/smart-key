@@ -20,6 +20,9 @@ module.exports = {
       video: {
         type: Sequelize.STRING
       },
+      pdf: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

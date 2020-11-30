@@ -9,7 +9,10 @@ const checkUser = async (req,res,next) => {
     });
 
     if (!data){return next()}
-    return res.json('user with email already exits');
+    return res.json({
+      'succ':0,
+      'msg':  'user with email already exits'
+    });
 }
 
 module.exports = checkUser;

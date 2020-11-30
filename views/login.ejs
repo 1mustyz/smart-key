@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Sign Up</title>
+		<style>
+body
+{   background: #090c15;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+	
+}
+.loginBox
+{   position: relative;
+	width: 350px;
+    padding: 80px 15px;
+    padding-bottom: 20px;
+	box-sizing: border-box;
+	background: rgba(0,0,0,.5);
+	border-radius:10px;
+	
+}
+.avatar
+{
+	width: 90px;
+	height: 90px;
+	border-radius: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: calc(-100px/2);
+	left: calc(35%);
+}
+h2
+{
+	margin: 0;
+	padding: 0 0 30px;
+	color: #1dd305;;
+	text-align: center;
+	font-weight:bold;
+	top:30px;
+}
+.loginBox p
+{
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	color: #fff;
+	font-family:arial;
+	
+}
+.loginBox input
+{
+	width: 100%;
+	margin-bottom: 20px;
+}
+.loginBox input
+{
+	width: 100%;
+	margin-bottom: 20px;
+}
+.loginBox input[type="text"],
+.loginBox input[type="password"],
+.loginBox input[type="email"]
+{
+	border: 2px;
+	border-bottom: 1px solid white;
+	background:transparent;
+	outline: none;
+	height: 35px;
+	color: white;
+	font-size:16px;
+}
+::placeholder
+{
+	color: rgba(255,255,255,.5);
+	font-family:arial;
+	font-size:15px;
+	
+}
+.loginBox input[type="submit"]
+{
+	border: none;
+	outline:none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+	background: #1dd305; ;
+	cursor: pointer;
+	border-radius: 30px;
+}
+.loginBox input[type="submit"]:hover
+{
+	background: #2b862b;
+	color: #262626;
+}
+a{
+color:white;
+border:none;
+font-family:arial;
+font-weight:bold;
+outline:none;
+}
+a:hover{
+color:black;
+background-color:white;
+}
+button{
+    border: none;
+    background: #2b862b;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+		</style>	
+		
+		
+</head>
+
+<body>
+<div class="loginBox">
+<img src="/img/avatar.jpg" class="avatar"/>
+<h2>Login</h2>
+<p class="msg" value=""></p>
+			<form class="login-form" action="" method="POST">
+                <p>Emaili or UserName</p>
+				<input type="email" name="email" placeholder="Enter Email" value=""/>
+				<p>Password</p>
+				<input type="password" name="password" placeholder="••••••" value=""/><br /><br>
+				<input type="submit" name="" value="Login">
+				<a href="#">Forgeten Password? </a>
+				||
+				<button>Sign up</button>
+				
+</form>
+				
+</div>
+<script src="/javascripts/login.js"></script>
+</body>
+</html>

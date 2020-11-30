@@ -13,11 +13,15 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   };
+  Post.associate = (models) =>{
+    Post.hasMany(models.Comment);
+  }
   Post.init({
     title: DataTypes.STRING,
     text: DataTypes.STRING,
     photo: DataTypes.STRING,
-    video: DataTypes.STRING
+    video: DataTypes.STRING,
+    pdf: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Post',

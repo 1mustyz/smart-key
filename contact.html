@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Contact Us</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="assets/CSS/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+padding:0;
+margin:0;
+background-color: #090c15;
+}
+.formdesign{
+padding-top: 160px;
+text-transform:uppercase;
+transition: all 4s ease-in-out;
+text-align:center;
+}
+.formdesign h1{
+font-size:32px;
+line-height:10px;
+text-align:center;
+color: #1dd305;
+line-height: 2;
+
+}
+.formdesign h2{
+line-height:20px;
+color:white;
+text-align:center;
+}
+form{
+margin-top:0px;
+transition: all 4s ease-in-out;
+text-align:center;
+
+}
+.form-control{
+width:600px;
+background:transparent;
+border:none;
+outline:none;
+border-bottom:1px solid white;
+color:#fff;
+font-size:18px;
+margin-bottom:30px;
+}
+input{
+height:45px;
+}
+#submit{
+background-color:#1dd305;
+border-color:transparent;
+font-size:20px;
+font-weight:bold;
+letter-spacing:2px;
+height:50px;
+margin-top:20px;
+}
+
+}
+#submit:hover{
+background-color:#f44336;
+cursor:pointer;
+
+}
+
+
+</style>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbar">
+        <i class="fa fa-bars"></i>
+        </label>
+    <label class="qbc">BrandName</label>
+    <ul>
+        <li style="--i: .6s"><a href="index.html" class="active">Home</a></li>
+        <li style="--i: .85s"><a href="Advert.html">Adverts</a></li>
+        <li style="--i: 1.1s"><a href="#">About</a></li>
+        <li style="--i: 1.35s"><a href="contact.html">Contact</a></li>
+        <li style="--i: 1.655s"><a href="login.html">Sign in</a></li>
+    </ul>
+</nav>
+<div class="formdesign">
+<h1>Hey welcome</h1>
+<h2>We are always here to serve you Better</h2>
+</div>
+<div>
+<form class="contact-form" method="Post" action="" required>
+<input type="text" name="text" class="form-control" placeholder="Your Name" required=""><br>
+<input type="email" name="email" class="form-control" placeholder="Your email" required=""><br>
+<textarea name="text" class="form-control" rows="4" required placeholder="Enter your message here"></textarea><br>
+<input type="submit" name="submit" required value="SEND MESSAGE" class="form-control" id="submit" >
+
+</form>
+</div>
+
+</body>
+</html>

@@ -13,10 +13,19 @@ const create = async (req,res) => {
     return res.json('created');
 }
 
+const renderView = (req,res) =>{
+    res.render('login');
+}
+
+const renderRegister = (req,res) =>{
+    res.render('register');
+}
+
 const login = async (req,res) => {
 
     const email = req.body.email;
     const password = req.body.password;
+    let msg; 
 
   const admin = await Admin.findOne({
        where:{
@@ -27,27 +36,42 @@ const login = async (req,res) => {
    });
 
    if (!admin){
-     return  res.json("you have to register first");
+     return  res.json({
+         "succ":0,
+         "msg":"you have to register first"
+        });
+    // msg = "you have to register first";
+
     }
     
     const checkPass = bcrypt.compareSync(password, admin.password);
     if (!checkPass){
-        return  res.json("your password is incorrect");
+        return  res.json({
+            "succ":1,
+            "msg":"your password is incorrect"
+           });;
+        // msg = "your password is incorrect"
+    }else{
+
+        const payLoad = {
+            id : admin.id,
+        }
+        const token = jwt.sign(payLoad,'myVerySecret')
+        
+        return res.json({
+            "succ":2, 
+            "token" : token,
+            "msg" : "login successfull",
+            "admin" : admin,
+            "statusCode" : 200
+        });
     }
 
-    const payLoad = {
-        id : admin.id,
-    }
-    const token = jwt.sign(payLoad,'myVerySecret')
-       res.json({
-           "token" : token,
-           "msg" : "login successfull",
-           "admin" : admin,
-           "statusCode" : 200
-       });
 }
 
 module.exports = {
     create,
-    login
+    login,
+    renderView,
+    renderRegister
 }
