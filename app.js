@@ -10,6 +10,7 @@ var usersRouter = require('./routes/users');
 const adminRouter = require('./routes/admin.route');
 const postRouter = require('./routes/post.route');
 const commentRouter = require('./routes/comment.route');
+const contactRouter = require('./routes/contact.route');
 
 const passport = require('passport');
 
@@ -34,6 +35,7 @@ app.use('/users', usersRouter);
 app.use('/admin', adminRouter);
 app.use('/post', postRouter);
 app.use('/comment',commentRouter);
+app.use('/contact',contactRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

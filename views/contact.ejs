@@ -91,14 +91,16 @@ cursor:pointer;
 <h2>We are always here to serve you Better</h2>
 </div>
 <div>
+    <div class="msg"></div>
 <form class="contact-form" method="Post" action="" required>
-<input type="text" name="text" class="form-control" placeholder="Your Name" required=""><br>
-<input type="email" name="email" class="form-control" placeholder="Your email" required=""><br>
-<textarea name="text" class="form-control" rows="4" required placeholder="Enter your message here"></textarea><br>
+<input type="text" name="name" class="form-control" placeholder="Your Name" required="" value=""><br>
+<input type="email" name="email" class="form-control" placeholder="Your email" required="" value=""><br>
+<textarea name="text" class="form-control" rows="4" required placeholder="Enter your message here" value=""></textarea><br>
 <input type="submit" name="submit" required value="SEND MESSAGE" class="form-control" id="submit" >
 
 </form>
 </div>
 
+<script src="/javascripts/nodemailer.js"></script>
 </body>
 </html>
